@@ -469,7 +469,7 @@ class EmbeddedSphinxShell(object):
         is_okexcept = (decorator is not None and \
                      decorator.startswith('@okexcept')) or self.is_okexcept
         no_traceback = (decorator is not None and
-                        decorator.partition(' ')[2] == 'no_traceback') or \
+                        decorator.partition(' ')[2].startswith('no_traceback')) or \
                        self.no_traceback
         is_okwarning = decorator=='@okwarning' or self.is_okwarning
         is_savefig = decorator is not None and \

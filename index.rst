@@ -28,6 +28,6 @@ The same with decorators:
         # @okexcept pseudodecorator without argument
         1 / 0
 
-        @okexcept no_traceback
+        @okexcept no_traceback  # noqa: E999
         # @okexcept pseudodecorator with no_traceback argument
 	1 / 0
